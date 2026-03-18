@@ -1,3 +1,45 @@
 h1 {
     color: crimson;
 }
+
+details.accordion{
+    margin-top: 1rem;
+}
+
+details.accordion summary{
+    background-color: black;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+details.accordion summary:focus{
+    outline: 3px solid #fc0;
+	background-color: #fc0;
+	color: #000;
+}
+
+.accordion-content{
+    background-color: #f2f2f2;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0 0 8px 8px;
+}
+
+label.required::after {
+    content: "*";
+    color: crimson;
+  }
+
+  label,
+  input,
+  small {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  fieldset {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }

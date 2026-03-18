@@ -5,8 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nie ujdzie ci to płazem</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>NIE UJDZIE CI TO PŁAZEM</h1>
+    <section id="hero">
+        <h1>NIE UJDZIE CI TO PŁAZEM</h1>
+        <a href="pricing.html" id="nav-pricing">Pricing</a>
+        <p>Lorem ipsum, dolor sit amet consectetur 
+            adipisicing elit. Dolorum, dolor!</p>
+        <button id="cta-main">CTA1</button>
+    </section>
+
+    <section id="problem">
+        <h2>Problem</h2>
+        <ul>
+            <li>P1</li>
+            <li>P2</li>
+            <li>P3</li>
+        </ul>
+    </section>
+
+    <section id="features">
+        <h2>Funkcje</h2>
+        <ol>
+            <li>F1</li>
+            <li>F2</li>
+            <li>F3</li>
+        </ol>
+    </section>
+
+    <section id="cta-section">
+        <button>CTA2</button>
+    </section>
+
+    <section id="signup">
+        <h2>Zgłoszenie</h2>
+
+        <form id="signup-form">
+      <fieldset>
+        <legend>Zgłoszenie</legend>
+        <div>
+          <label for="email">Email:</label>
+          <input placeholder="jan.kowalski@mail.pl" type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="role">Rola:</label>
+          <select id="role" name="role" required>
+             <option value="zatroskany-obywatel">Zatroskany obywatel</option>
+             <option value="naukowiec">Naukowiec</option>
+             <option value="inspektor">Inspektor</option>
+             <option value="zaba">Żaba</option>
+         </select>
+        </div>
+        <div>
+            <label for="opis">Opis sytuacji:</label>
+            <textarea id="opis" rows="5" required></textarea>
+        </div>
+        <div>
+            <label for="place">Miejsce zdarzenia:</label>
+            <textarea id="place" rows="2" required></textarea>
+        </div>
+        <div>
+          <label for="actions">Podjęte działanie:</label>
+          <select id="actions" name="actions">
+             <option value="nie">Nie</option>
+             <option value="tak">Tak</option>
+         </select>
+        </div>
+
+        <div>
+            <label for="notes">Uwagi:</label>
+            <textarea id="notes" rows="5"></textarea>
+        </div>
+        <button type="submit">Wyślij formularz</button>
+      </fieldset>
+    </form>
+
+    </section>
+
+    <section id="faq">
+        <h2>FAQ</h2>
+
+        <details class="accordion">
+          <summary>Czy żaby są super?</summary>
+          <div class="accordion-content">
+            <h3>Czy żaby są super?</h3>
+          <p>
+            TAK.
+          </p>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>Czy żaby są zielone?</summary>
+          <div class="accordion-content">
+            <h3>Czy żaby są zielone?</h3>
+          <p>
+            Także, ale nie zawsze! Żaby mogą mieć różne kolory, 
+            często spotykane w Polsce są brązowawe żabki 
+            hopające po łąkach.
+          </div>
+        </details>
+    </section>
+    
 </body>
 </html>
