@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (form) {
         form.addEventListener("submit", function () {
+            alert("Dziękujemy za przesłanie zgłoszenia!")
             window.dataLayer.push({
                 event: "form_submit"
             });
