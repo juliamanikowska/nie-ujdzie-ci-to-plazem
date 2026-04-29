@@ -47,9 +47,7 @@ label.required::after {
     padding-right: 2rem;
   }
 
-  a {
-    color: rgb(0, 156, 0);
-  }
+
 
   button {
     background-color: rgb(223, 249, 161);   
@@ -80,4 +78,14 @@ label.required::after {
 
 footer {
     margin-top: 40px;
+}
+
+#cta-main.variant-b {
+    background-color: #2ecc71;
+    color: black;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 8px;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
 }
