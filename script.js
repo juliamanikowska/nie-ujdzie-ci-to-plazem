@@ -14,7 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cta) {
         cta.addEventListener("click", function () {
             window.dataLayer.push({
-                event: "cta_click"
+                event: "cta_click",
+                variant: localStorage.getItem("ab_variant")
             });
         });
     }
@@ -51,4 +52,32 @@ window.addEventListener("scroll", function () {
 
         scrollFired = true;
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const ctaLink = document.getElementById("nav-pricing");
+
+    if (!ctaLink) return;
+
+    let variant = localStorage.getItem("ab_variant");
+
+    if (!variant) {
+        variant = Math.random() < 0.5 ? "A" : "B";
+        localStorage.setItem("ab_variant", variant);
+    }
+
+    if (variant === "A") {
+        ctaLink.textContent = "Dowiedz się więcej o żabach!";
+    } else {
+        ctaLink.textContent = "KLIKNIJ TUTAJ, aby pomóc żabom!";
+        const button = document.getElementById("cta-main");
+        if (button) {
+            button.classList.add("variant-b");
+        }
+    }
+
+    window.dataLayer.push({
+        event: "ab_test_variant",
+        variant: variant
+    });
 });
