@@ -28,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener("submit", function () {
             alert("Dziękujemy za przesłanie zgłoszenia!")
             window.dataLayer.push({
-                event: "form_submit"
+                event: "form_submit",
+                variant: localStorage.getItem("ab_variant")
             });
         });
     }
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.dataLayer.push({
-        event: "ab_test_variant",
+        event: "ab_impression",
         variant: variant
     });
 });
